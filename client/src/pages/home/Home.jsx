@@ -2,14 +2,24 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./home.css";
 import Header from "../../components/header/Header";
 import Featured from "../../components/featured/Featured";
+import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
+import MailList from "../../components/mailList/MailList";
+import Footer from "../../components/footer/Footer";
+import PropertyList from "../../components/propertyList/PropertyList";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div>
       <Navbar />
       <Header />
       <div className="homeContainer">
         <Featured />
+        <h1 className="homeTitle">Browse by property type</h1>
+        <PropertyList />
+        <h1 className="homeTitle">Home guests love</h1>
+        <FeaturedProperties />
+        <MailList />
+        <Footer />
       </div>
     </div>
   );
