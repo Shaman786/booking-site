@@ -28,8 +28,12 @@ mongoose.connection.on("disconnected", () => {
 });
 
 // middleware
-app.use("/auth", authRoute);
+app.use(express.json());
+
+app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/hotels", hotelsRoute);
+app.use("/api/rooms", roomsRoute);
 
 app.listen(8800, () => {
   connect();
